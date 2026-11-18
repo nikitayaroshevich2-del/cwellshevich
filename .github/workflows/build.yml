@@ -1,0 +1,24 @@
+name: Build MARINKA 67
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    container:
+      image: debian:bookworm
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build ISO
+        working-directory: marinka67-github
+        run: |
+          apt-get update
+          apt-get install -y sudo
+          chmod +x build.sh auto/config config/hooks/live/*.hook.chroot
+          ./build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MARINKA_67
+          path: marinka67-github/MARINKA_67.iso
+          retention-days: 7
+          compression-level: 0
