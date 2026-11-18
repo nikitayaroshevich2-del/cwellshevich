@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=MARINKA 67
+Description=MARINKA 67 boot splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/marinka67
+ScriptFile=/usr/share/plymouth/themes/marinka67/marinka67.script

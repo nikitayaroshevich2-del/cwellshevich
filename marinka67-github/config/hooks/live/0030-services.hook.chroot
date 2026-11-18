@@ -1,0 +1,4 @@
+#!/bin/sh
+systemctl enable NetworkManager || true
+systemctl enable bluetooth || true
+systemctl enable lightdm || true

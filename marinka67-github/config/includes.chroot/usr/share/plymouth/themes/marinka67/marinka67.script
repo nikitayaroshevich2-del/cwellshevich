@@ -1,0 +1,5 @@
+bg = Image("bg.png");
+sw = Window.GetWidth(); sh = Window.GetHeight();
+scaled = bg.Scale(sw, sh);
+sprite = Sprite(scaled);
+sprite.SetZ(-10);

@@ -1,0 +1,26 @@
+#!/bin/sh
+# Фирменное название системы
+cat > /etc/os-release <<OS
+PRETTY_NAME="MARINKA 67 OS"
+NAME="MARINKA 67 OS"
+ID=marinka67
+ID_LIKE=debian
+VERSION_ID="1.0"
+HOME_URL="https://example.invalid/"
+OS
+echo "MARINKA 67 OS \\n \\l" > /etc/issue
+echo "marinka67" > /etc/hostname
+
+# Calamares: свой брендинг на основе debian
+if [ -d /usr/share/calamares/branding/debian ] && [ ! -d /usr/share/calamares/branding/marinka67 ]; then
+  cp -a /usr/share/calamares/branding/debian /usr/share/calamares/branding/marinka67
+  cp -f /etc/calamares/branding/marinka67/logo.png    /usr/share/calamares/branding/marinka67/logo.png    || true
+  cp -f /etc/calamares/branding/marinka67/welcome.png /usr/share/calamares/branding/marinka67/welcome.png || true
+  D=/usr/share/calamares/branding/marinka67/branding.desc
+  sed -i -E 's/^(componentName:).*/\1 marinka67/; s/Debian GNU\/Linux/MARINKA 67 OS/g; s/Debian/MARINKA 67/g' "$D" || true
+  sed -i -E 's/^(\s*productLogo:).*/\1 "logo.png"/; s/^(\s*productIcon:).*/\1 "logo.png"/; s/^(\s*productWelcome:).*/\1 "welcome.png"/' "$D" || true
+  [ -f /etc/calamares/settings.conf ] && sed -i -E 's/^branding:.*/branding: marinka67/' /etc/calamares/settings.conf || true
+fi
+
+# Права на ярлыки и скрипты
+chmod +x /etc/skel/Desktop/*.desktop /usr/local/bin/marinka-trust-desktop || true

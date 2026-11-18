@@ -1,0 +1,73 @@
+# Рабочий стол
+xfce4
+xfce4-goodies
+lightdm
+lightdm-gtk-greeter
+xorg
+xserver-xorg-input-all
+xserver-xorg-video-all
+dbus-x11
+# Файлы, терминал, утилиты
+thunar
+thunar-volman
+xfce4-terminal
+mousepad
+galculator
+ristretto
+file-roller
+gvfs
+gvfs-backends
+udisks2
+ntfs-3g
+exfatprogs
+dosfstools
+arandr
+synaptic
+# Интернет / браузер
+firefox-esr
+firefox-esr-l10n-ru
+network-manager
+network-manager-gnome
+wpasupplicant
+wireless-tools
+rfkill
+iw
+ca-certificates
+# Bluetooth
+bluez
+blueman
+# Звук
+pipewire
+pipewire-pulse
+wireplumber
+pavucontrol
+libspa-0.2-bluetooth
+# Прошивки (Wi-Fi, Bluetooth, видео)
+firmware-linux
+firmware-linux-nonfree
+firmware-misc-nonfree
+firmware-iwlwifi
+firmware-realtek
+firmware-atheros
+firmware-brcm80211
+# Оформление
+arc-theme
+papirus-icon-theme
+fonts-noto
+fonts-noto-color-emoji
+fonts-dejavu
+# Загрузочный экран и установщик
+plymouth
+plymouth-themes
+calamares
+calamares-settings-debian
+# Локализация
+locales
+console-setup
+task-russian
+task-russian-desktop
+# Прочее
+sudo
+curl
+wget
+nano

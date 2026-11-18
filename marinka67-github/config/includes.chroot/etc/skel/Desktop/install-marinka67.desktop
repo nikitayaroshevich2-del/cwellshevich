@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Установить MARINKA 67
+Exec=pkexec calamares
+Icon=/usr/share/pixmaps/marinka67.png
+Terminal=false
+Categories=System;

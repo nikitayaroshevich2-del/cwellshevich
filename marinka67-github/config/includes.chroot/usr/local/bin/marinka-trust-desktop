@@ -1,0 +1,6 @@
+#!/bin/sh
+for f in "$HOME"/Desktop/*.desktop; do
+  [ -f "$f" ] || continue
+  chmod +x "$f"
+  gio set -t string "$f" metadata::xfce-exe-checksum "$(sha256sum "$f" | cut -d' ' -f1)" 2>/dev/null
+done

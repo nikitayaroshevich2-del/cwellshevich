@@ -1,0 +1,12 @@
+{
+  "policies": {
+    "Homepage": { "URL": "https://www.google.com", "StartPage": "homepage" },
+    "DisplayBookmarksToolbar": "always",
+    "Bookmarks": [
+      { "Title": "YouTube",   "URL": "https://www.youtube.com",   "Placement": "toolbar" },
+      { "Title": "Википедия", "URL": "https://ru.wikipedia.org",  "Placement": "toolbar" },
+      { "Title": "Google",    "URL": "https://www.google.com",    "Placement": "toolbar" }
+    ],
+    "DisableTelemetry": true
+  }
+}

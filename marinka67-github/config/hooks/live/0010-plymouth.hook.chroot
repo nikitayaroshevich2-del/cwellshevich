@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+plymouth-set-default-theme marinka67 || true
+update-initramfs -u || true
